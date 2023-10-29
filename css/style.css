@@ -430,7 +430,7 @@ span{
 
 @media (max-width: 991px) {
     .header{
-        /* padding: 2rem 3%; */
+        padding: 2rem 3%;
     }
 
     section{
@@ -461,18 +461,23 @@ span{
 
     .navbar{
         position: absolute;
-        top: 100%;
+        top: 0;
         left: 0;
         width: 100%;
-        padding: 1rem 3%;
-        background: var(--bg-color);
-        border-top: .1rem solid rgba(0,0,0,0.2);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+        padding: 5rem 3% 1rem;
+        /* background: var(--bg-color); */
+        background: linear-gradient(90deg, var(--bg-color)10%, rgba(0,0,0,0) 100%);
+        backdrop-filter: blur(3px);
+        border-bottom: .1rem solid rgba(0,0,0,0.2);
+        border-bottom-right-radius: 50%;
+        box-shadow: 0 .5rem 2rem rgba(0,0,0,0.8);
         display: none;
+        z-index: -1;
     }
 
     .navbar.active{
         display: block;
+        text-align: center;
     } 
 
     .navbar a{
