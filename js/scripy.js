@@ -23,10 +23,12 @@ window.onscroll = () => {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active')
+                navbar.classList.remove('active');
             })
         }
     })
     // ===== Sticky navbar ==========
+    
 
 
     // ===== remove Toggle icon and navbar when clicked nav links (scroll )==========
@@ -44,7 +46,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .projects-box, .contact form , .about-content h3', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .skills-container, .projects-box, .contact form , .about-content h3', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
